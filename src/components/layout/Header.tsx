@@ -57,8 +57,10 @@ const Header = () => {
               <Globe className="h-4 w-4" />
               <span className="text-sm font-medium">{language.toUpperCase()}</span>
             </Button>
-            <Button className="bg-primary hover:bg-primary-hover text-primary-foreground">
-              {language === 'pt' ? 'Fale Conosco' : 'Contact Us'}
+            <Button className="bg-primary hover:bg-primary-hover text-primary-foreground" asChild>
+              <a href="/contato">
+                {language === 'pt' ? 'Fale Conosco' : 'Contact Us'}
+              </a>
             </Button>
           </div>
 
@@ -97,8 +99,10 @@ const Header = () => {
                   <Globe className="h-4 w-4" />
                   <span className="text-sm font-medium">{language.toUpperCase()}</span>
                 </Button>
-                <Button className="bg-primary hover:bg-primary-hover text-primary-foreground">
-                  {language === 'pt' ? 'Fale Conosco' : 'Contact Us'}
+                <Button className="bg-primary hover:bg-primary-hover text-primary-foreground" asChild>
+                  <a href="/contato">
+                    {language === 'pt' ? 'Fale Conosco' : 'Contact Us'}
+                  </a>
                 </Button>
               </div>
             </nav>
