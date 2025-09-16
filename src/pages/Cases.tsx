@@ -5,6 +5,12 @@ import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CTASection from '@/components/sections/CTASection';
+import casePortoSantos from '@/assets/case-porto-santos.jpg';
+import caseRefinariaEmergency from '@/assets/case-refinaria-emergency.jpg';
+import caseOffshoreMonitoring from '@/assets/case-offshore-monitoring.jpg';
+import caseValeConsultoria from '@/assets/case-vale-consultoria.jpg';
+import caseSalvageSaoSebastiao from '@/assets/case-salvage-sao-sebastiao.jpg';
+import caseBraskemTraining from '@/assets/case-braskem-training.jpg';
 
 interface CaseStudy {
   id: string;
@@ -37,7 +43,7 @@ const caseStudies: CaseStudy[] = [
       "Operações portuárias retomadas em 6 horas",
       "Conformidade total com órgãos ambientais"
     ],
-    image: "/api/placeholder/600/400"
+    image: casePortoSantos
   },
   {
     id: "refinaria-petrobras-emergency",
@@ -55,7 +61,7 @@ const caseStudies: CaseStudy[] = [
       "Plano de monitoramento implantado",
       "Zero multas ou penalidades"
     ],
-    image: "/api/placeholder/600/400"
+    image: caseRefinariaEmergency
   },
   {
     id: "plataforma-petrobras-monitoring",
@@ -73,7 +79,7 @@ const caseStudies: CaseStudy[] = [
       "100% de conformidade regulatória",
       "Redução de 30% nos custos operacionais"
     ],
-    image: "/api/placeholder/600/400"
+    image: caseOffshoreMonitoring
   },
   {
     id: "vale-consultoria-pei",
@@ -91,7 +97,7 @@ const caseStudies: CaseStudy[] = [
       "Simulados trimestrais implementados",
       "Certificação de excelência obtida"
     ],
-    image: "/api/placeholder/600/400"
+    image: caseValeConsultoria
   },
   {
     id: "cosipa-salvage-operation",
@@ -109,7 +115,7 @@ const caseStudies: CaseStudy[] = [
       "Zero impacto ambiental",
       "Operação concluída em 72 horas"
     ],
-    image: "/api/placeholder/600/400"
+    image: caseSalvageSaoSebastiao
   },
   {
     id: "braskem-training-program",
@@ -127,7 +133,7 @@ const caseStudies: CaseStudy[] = [
       "Tempo de resposta reduzido em 40%",
       "Programa renovado por mais 2 anos"
     ],
-    image: "/api/placeholder/600/400"
+    image: caseBraskemTraining
   }
 ];
 

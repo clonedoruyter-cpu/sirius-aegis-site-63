@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CTASection from '@/components/sections/CTASection';
+import galleryContainment1 from '@/assets/gallery-containment-1.jpg';
+import galleryEmergency1 from '@/assets/gallery-emergency-1.jpg';
+import galleryMonitoring1 from '@/assets/gallery-monitoring-1.jpg';
+import galleryTraining1 from '@/assets/gallery-training-1.jpg';
+import gallerySalvage1 from '@/assets/gallery-salvage-1.jpg';
+import galleryConsultation1 from '@/assets/gallery-consultation-1.jpg';
+import galleryLaboratory1 from '@/assets/gallery-laboratory-1.jpg';
+import galleryBarriers1 from '@/assets/gallery-barriers-1.jpg';
+import galleryMaintenance1 from '@/assets/gallery-maintenance-1.jpg';
 
 interface GalleryItem {
   id: string;
@@ -28,7 +37,7 @@ const galleryItems: GalleryItem[] = [
     location: "Santos - SP",
     date: "Março 2024",
     description: "Implantação de barreiras de contenção flutuantes para controle de vazamento de óleo combustível",
-    image: "/api/placeholder/800/600",
+    image: galleryContainment1,
     tags: ["contenção", "marítimo", "óleo", "emergência"]
   },
   {
@@ -38,7 +47,7 @@ const galleryItems: GalleryItem[] = [
     location: "Cubatão - SP",
     date: "Janeiro 2024",
     description: "Mobilização de equipe especializada para atendimento a emergência ambiental industrial",
-    image: "/api/placeholder/800/600",
+    image: galleryEmergency1,
     tags: ["emergência", "equipe", "industrial", "resposta"]
   },
   {
@@ -48,7 +57,7 @@ const galleryItems: GalleryItem[] = [
     location: "Bacia de Santos",
     date: "Dezembro 2023",
     description: "Sensores automatizados para monitoramento contínuo da qualidade da água",
-    image: "/api/placeholder/800/600",
+    image: galleryMonitoring1,
     tags: ["monitoramento", "sensores", "água", "automação"]
   },
   {
@@ -58,7 +67,7 @@ const galleryItems: GalleryItem[] = [
     location: "Camaçari - BA",
     date: "Setembro 2023",
     description: "Capacitação de funcionários em procedimentos de resposta a emergências ambientais",
-    image: "/api/placeholder/800/600",
+    image: galleryTraining1,
     tags: ["treinamento", "capacitação", "procedimentos", "emergência"]
   },
   {
@@ -68,7 +77,7 @@ const galleryItems: GalleryItem[] = [
     location: "São Sebastião - SP",
     date: "Outubro 2023",
     description: "Reflutuação de embarcação encalhada com uso de rebocadores especializados",
-    image: "/api/placeholder/800/600",
+    image: gallerySalvage1,
     tags: ["salvatagem", "reboque", "embarcação", "marítimo"]
   },
   {
@@ -78,7 +87,7 @@ const galleryItems: GalleryItem[] = [
     location: "Parauapebas - PA",
     date: "Novembro 2023",
     description: "Desenvolvimento de Plano de Emergência Individual com equipe técnica do cliente",
-    image: "/api/placeholder/800/600",
+    image: galleryConsultation1,
     tags: ["consultoria", "PEI", "planejamento", "reunião"]
   },
   {
@@ -88,7 +97,7 @@ const galleryItems: GalleryItem[] = [
     location: "São Paulo - SP",
     date: "Dezembro 2023",
     description: "Análises químicas e microbiológicas de amostras coletadas em campo",
-    image: "/api/placeholder/800/600",
+    image: galleryLaboratory1,
     tags: ["laboratório", "análises", "química", "microbiologia"]
   },
   {
@@ -98,7 +107,7 @@ const galleryItems: GalleryItem[] = [
     location: "Paulínia - SP",
     date: "Fevereiro 2024",
     description: "Implantação de sistema de contenção terrestre para prevenção de contaminação do solo",
-    image: "/api/placeholder/800/600",
+    image: galleryBarriers1,
     tags: ["barreiras", "terrestre", "solo", "prevenção"]
   },
   {
@@ -108,7 +117,7 @@ const galleryItems: GalleryItem[] = [
     location: "Rio de Janeiro - RJ",
     date: "Janeiro 2024",
     description: "Manutenção preventiva e calibração de equipamentos de resposta a emergências",
-    image: "/api/placeholder/800/600",
+    image: galleryMaintenance1,
     tags: ["manutenção", "equipamentos", "calibração", "preventiva"]
   }
 ];

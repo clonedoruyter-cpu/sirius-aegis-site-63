@@ -4,6 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CTASection from '@/components/sections/CTASection';
+import serviceContainmentBarriers from '@/assets/service-containment-barriers.jpg';
+import serviceMaritimeEmergency from '@/assets/service-maritime-emergency.jpg';
+import servicePeiPae from '@/assets/service-pei-pae.jpg';
+import serviceMonitoring from '@/assets/service-monitoring.jpg';
+import serviceEnvironmentalConsulting from '@/assets/service-environmental-consulting.jpg';
+import serviceSalvageRescue from '@/assets/service-salvage-rescue.jpg';
 
 interface Service {
   icon: React.ReactNode;
@@ -25,7 +31,7 @@ const services: Service[] = [
       "Resposta rápida 24/7",
       "Equipamentos certificados internacionalmente"
     ],
-    image: "/api/placeholder/600/400",
+    image: serviceContainmentBarriers,
     href: "/servicos/barreiras-contencao"
   },
   {
@@ -38,7 +44,7 @@ const services: Service[] = [
       "Equipamentos de última geração",
       "Cobertura nacional"
     ],
-    image: "/api/placeholder/600/400",
+    image: serviceMaritimeEmergency,
     href: "/servicos/emergencias-maritimas"
   },
   {
@@ -51,7 +57,7 @@ const services: Service[] = [
       "Conformidade regulatória total",
       "Treinamentos inclusos"
     ],
-    image: "/api/placeholder/600/400",
+    image: servicePeiPae,
     href: "/servicos/pei-pae"
   },
   {
@@ -64,7 +70,7 @@ const services: Service[] = [
       "Relatórios técnicos detalhados",
       "Análises laboratoriais certificadas"
     ],
-    image: "/api/placeholder/600/400",
+    image: serviceMonitoring,
     href: "/servicos/monitoramento"
   },
   {
@@ -77,7 +83,7 @@ const services: Service[] = [
       "Estudos ambientais",
       "Conformidade regulatória"
     ],
-    image: "/api/placeholder/600/400",
+    image: serviceEnvironmentalConsulting,
     href: "/servicos/consultoria"
   },
   {
@@ -90,7 +96,7 @@ const services: Service[] = [
       "Operações de reboque",
       "Equipe altamente treinada"
     ],
-    image: "/api/placeholder/600/400",
+    image: serviceSalvageRescue,
     href: "/servicos/salvatagem"
   }
 ];
