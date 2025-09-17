@@ -9,7 +9,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useToast } from '@/hooks/use-toast';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,17 +19,18 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em até 2 horas úteis.",
+        description: "Entraremos em contato em até 2 horas úteis."
       });
       setFormData({
         name: '',
@@ -43,13 +43,13 @@ const Contact = () => {
       setIsSubmitting(false);
     }, 1000);
   };
-
   const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -87,53 +87,28 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name">Nome Completo *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => handleChange('name', e.target.value)}
-                          required
-                          className="mt-1"
-                        />
+                        <Input id="name" value={formData.name} onChange={e => handleChange('name', e.target.value)} required className="mt-1" />
                       </div>
                       <div>
                         <Label htmlFor="email">E-mail *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleChange('email', e.target.value)}
-                          required
-                          className="mt-1"
-                        />
+                        <Input id="email" type="email" value={formData.email} onChange={e => handleChange('email', e.target.value)} required className="mt-1" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="phone">Telefone *</Label>
-                        <Input
-                          id="phone"
-                          value={formData.phone}
-                          onChange={(e) => handleChange('phone', e.target.value)}
-                          required
-                          className="mt-1"
-                          placeholder="(11) 99999-9999"
-                        />
+                        <Input id="phone" value={formData.phone} onChange={e => handleChange('phone', e.target.value)} required className="mt-1" placeholder="(11) 99999-9999" />
                       </div>
                       <div>
                         <Label htmlFor="company">Empresa</Label>
-                        <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => handleChange('company', e.target.value)}
-                          className="mt-1"
-                        />
+                        <Input id="company" value={formData.company} onChange={e => handleChange('company', e.target.value)} className="mt-1" />
                       </div>
                     </div>
 
                     <div>
                       <Label htmlFor="service">Serviço de Interesse</Label>
-                      <Select value={formData.service} onValueChange={(value) => handleChange('service', value)}>
+                      <Select value={formData.service} onValueChange={value => handleChange('service', value)}>
                         <SelectTrigger className="mt-1">
                           <SelectValue placeholder="Selecione um serviço" />
                         </SelectTrigger>
@@ -151,30 +126,14 @@ const Contact = () => {
 
                     <div>
                       <Label htmlFor="message">Mensagem *</Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => handleChange('message', e.target.value)}
-                        required
-                        className="mt-1 min-h-32"
-                        placeholder="Descreva seu projeto ou necessidade..."
-                      />
+                      <Textarea id="message" value={formData.message} onChange={e => handleChange('message', e.target.value)} required className="mt-1 min-h-32" placeholder="Descreva seu projeto ou necessidade..." />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full bg-primary hover:bg-primary-hover"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        "Enviando..."
-                      ) : (
-                        <>
+                    <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary-hover" disabled={isSubmitting}>
+                      {isSubmitting ? "Enviando..." : <>
                           <Send className="mr-2 h-4 w-4" />
                           Enviar Mensagem
-                        </>
-                      )}
+                        </>}
                     </Button>
                   </form>
                 </CardContent>
@@ -197,7 +156,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <Button variant="outline" className="w-full border-red-300 text-red-700 hover:bg-red-100" asChild>
-                    <a href="tel:+5511999999999">(11) 99999-9999</a>
+                    <a href="tel:+5511999999999">(81) 99822-1113</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -209,9 +168,7 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-primary mr-3" />
                     <div>
                       <p className="font-medium">E-mail</p>
-                      <a href="mailto:contato@siriusambiental.com.br" className="text-primary hover:underline">
-                        contato@siriusambiental.com.br
-                      </a>
+                      <a href="mailto:contato@siriusambiental.com.br" className="text-primary hover:underline">contato@siriusport.com.br</a>
                     </div>
                   </div>
                   
@@ -279,8 +236,6 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
