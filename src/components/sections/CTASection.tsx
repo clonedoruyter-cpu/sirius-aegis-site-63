@@ -41,8 +41,8 @@ const CTASection = () => {
                 className="w-full"
                 asChild
               >
-                <a href="tel:+5511999999999">
-                  (11) 99999-9999
+                <a href="tel:+5581998221113">
+                  (81) 99822-1113
                 </a>
               </Button>
             </CardContent>
@@ -65,7 +65,7 @@ const CTASection = () => {
                 className="w-full"
                 asChild
               >
-                <a href="mailto:contato@siriusambiental.com.br">
+                <a href="mailto:contato@siriusport.com.br">
                   Enviar E-mail
                 </a>
               </Button>
@@ -99,7 +99,7 @@ const CTASection = () => {
 
         <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '450ms' }}>
           <p className="text-white/80 text-sm">
-            Resposta em até 2 horas úteis • Atendimento nacional • Certificações ISO 14001
+            Resposta em até 2 horas úteis • Atendimento no Nordeste • Certificações ISO 14001
           </p>
         </div>
       </div>

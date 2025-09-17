@@ -10,7 +10,7 @@ const FAQ = () => {
     {
       id: "item-1",
       question: "Qual o tempo de resposta em caso de emergência ambiental?",
-      answer: "Nosso tempo de resposta para emergências é de até 2 horas em áreas metropolitanas e até 4 horas em locais mais remotos. Mantemos equipes estrategicamente posicionadas em todo o território nacional para garantir atendimento rápido 24 horas por dia, 7 dias por semana."
+      answer: "Nosso tempo de resposta para emergências é de até 2 horas em áreas metropolitanas e até 4 horas em locais mais remotos. Mantemos equipes estrategicamente posicionadas na região Nordeste para garantir atendimento rápido 24 horas por dia, 7 dias por semana."
     },
     {
       id: "item-2", 
@@ -29,8 +29,8 @@ const FAQ = () => {
     },
     {
       id: "item-5",
-      question: "Vocês atendem em todo o território nacional?",
-      answer: "Sim, atendemos em todo o Brasil. Temos bases estratégicas nas principais regiões e parcerias locais que nos permitem mobilizar recursos rapidamente em qualquer estado. Para projetos de grande porte ou longa duração, estabelecemos bases temporárias no local."
+      question: "Vocês atendem em toda a região Nordeste?",
+      answer: "Sim, atendemos em toda a região Nordeste. Temos bases estratégicas nos principais estados nordestinos e parcerias locais que nos permitem mobilizar recursos rapidamente. Para projetos de grande porte ou longa duração, estabelecemos bases temporárias no local."
     },
     {
       id: "item-6",

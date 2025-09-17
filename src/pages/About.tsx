@@ -19,7 +19,7 @@ const About = () => {
   }, {
     icon: <Clock className="h-8 w-8 text-secondary" />,
     title: "Agilidade",
-    description: "Resposta rápida em situações de emergência com mobilização 24/7 em todo território nacional."
+    description: "Resposta rápida em situações de emergência com mobilização 24/7 na região Nordeste."
   }];
   return <div className="min-h-screen bg-background">
       <Header />
@@ -32,7 +32,7 @@ const About = () => {
             </h1>
             <p className="text-xl max-w-3xl mx-auto animate-slide-up">
               Mais de 15 anos de excelência em soluções ambientais, prevenção e resposta a emergências 
-              para indústrias e operações marítimas em todo o Brasil.
+              para indústrias e operações marítimas na região Nordeste.
             </p>
           </div>
         </section>
@@ -65,7 +65,7 @@ const About = () => {
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">Cobertura nacional com bases estratégicas</span>
+                      <span className="text-muted-foreground">Cobertura regional com bases estratégicas</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>

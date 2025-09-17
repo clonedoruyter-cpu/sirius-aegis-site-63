@@ -17,8 +17,8 @@ const stats: Stat[] = [
   {
     icon: <MapPin className="h-8 w-8 text-white" />,
     number: "100%",
-    label: "Cobertura Nacional",
-    description: "Atendimento em todo território nacional e águas brasileiras"
+    label: "Cobertura Nordeste",
+    description: "Atendimento em toda região Nordeste e águas costeiras"
   },
   {
     icon: <Award className="h-8 w-8 text-white" />,

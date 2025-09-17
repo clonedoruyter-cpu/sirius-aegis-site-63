@@ -156,9 +156,9 @@ const Contact = () => {
                       <p className="text-red-600 text-sm">Atendimento imediato</p>
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full border-red-300 text-red-700 hover:bg-red-100" asChild>
-                    <a href="tel:+5511999999999">(81) 99822-1113</a>
-                  </Button>
+                    <Button variant="outline" className="w-full border-red-300 text-red-700 hover:bg-red-100" asChild>
+                      <a href="tel:+558199822-1113">(81) 99822-1113</a>
+                    </Button>
                 </CardContent>
               </Card>
 
@@ -169,7 +169,7 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-primary mr-3" />
                     <div>
                       <p className="font-medium">E-mail</p>
-                      <a href="mailto:contato@siriusambiental.com.br" className="text-primary hover:underline">contato@siriusport.com.br</a>
+                      <a href="mailto:contato@siriusport.com.br" className="text-primary hover:underline">contato@siriusport.com.br</a>
                     </div>
                   </div>
                   
@@ -177,8 +177,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary mr-3" />
                     <div>
                       <p className="font-medium">Telefone Comercial</p>
-                      <a href="tel:+551133334444" className="text-primary hover:underline">
-                        (11) 3333-4444
+                      <a href="tel:+558199822-1113" className="text-primary hover:underline">
+                        (81) 99822-1113
                       </a>
                     </div>
                   </div>
@@ -187,10 +187,11 @@ const Contact = () => {
                     <MapPin className="h-5 w-5 text-primary mr-3" />
                     <div>
                       <p className="font-medium">Endereço</p>
-                      <p className="text-muted-foreground text-sm">
-                        Av. Paulista, 1000<br />
-                        São Paulo - SP, 01310-100
-                      </p>
+                       <p className="text-muted-foreground text-sm">
+                         PE-024, Rota dos Coqueiros, 4165<br />
+                         Torre 6 Apt. 702 - Paiva<br />
+                         Cabo de Santo Agostinho - PE
+                       </p>
                     </div>
                   </div>
                   
@@ -218,7 +219,7 @@ const Contact = () => {
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                      Atendimento nacional
+                      Atendimento no Nordeste
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />

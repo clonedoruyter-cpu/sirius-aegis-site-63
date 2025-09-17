@@ -42,7 +42,7 @@ const services: Service[] = [
       "Atendimento 24 horas por dia",
       "Equipes especializadas",
       "Equipamentos de última geração",
-      "Cobertura nacional"
+      "Cobertura no Nordeste"
     ],
     image: serviceMaritimeEmergency,
     href: "/servicos/emergencias-maritimas"
