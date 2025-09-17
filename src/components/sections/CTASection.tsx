@@ -1,15 +1,13 @@
 import { ArrowRight, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-
 const CTASection = () => {
-  return (
-    <section className="py-20 gradient-hero relative overflow-hidden">
+  return <section className="py-20 gradient-hero relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M20 0L0 20L20 40L40 20L20 0Z'/%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M20 0L0 20L20 40L40 20L20 0Z'/%3E%3C/g%3E%3C/svg%3E")`
+      }} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -33,14 +31,8 @@ const CTASection = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-2">Emergência 24h</h3>
-              <p className="text-white/80 mb-4 text-sm">
-                Atendimento imediato para situações críticas
-              </p>
-              <Button 
-                variant="cta-emergency" 
-                className="w-full"
-                asChild
-              >
+              <p className="text-white/80 mb-4 text-sm">Atendimento imediato </p>
+              <Button variant="cta-emergency" className="w-full" asChild>
                 <a href="tel:+5581998221113">
                   (81) 99822-1113
                 </a>
@@ -49,7 +41,9 @@ const CTASection = () => {
           </Card>
 
           {/* General Contact */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white animate-scale-in" style={{ animationDelay: '150ms' }}>
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white animate-scale-in" style={{
+          animationDelay: '150ms'
+        }}>
             <CardContent className="p-6 text-center">
               <div className="mb-4 flex justify-center">
                 <div className="p-3 bg-secondary rounded-full">
@@ -60,11 +54,7 @@ const CTASection = () => {
               <p className="text-white/80 mb-4 text-sm">
                 Consultoria e orçamentos personalizados
               </p>
-              <Button 
-                variant="outline-light" 
-                className="w-full"
-                asChild
-              >
+              <Button variant="outline-light" className="w-full" asChild>
                 <a href="mailto:contato@siriusport.com.br">
                   Enviar E-mail
                 </a>
@@ -73,7 +63,9 @@ const CTASection = () => {
           </Card>
 
           {/* Quote Request */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white animate-scale-in" style={{ animationDelay: '300ms' }}>
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white animate-scale-in" style={{
+          animationDelay: '300ms'
+        }}>
             <CardContent className="p-6 text-center">
               <div className="mb-4 flex justify-center">
                 <div className="p-3 bg-primary rounded-full">
@@ -84,11 +76,7 @@ const CTASection = () => {
               <p className="text-white/80 mb-4 text-sm">
                 Proposta técnica sem compromisso
               </p>
-              <Button 
-                variant="cta-primary"
-                className="w-full"
-                asChild
-              >
+              <Button variant="cta-primary" className="w-full" asChild>
                 <a href="/contato">
                   Solicitar Agora
                 </a>
@@ -97,14 +85,14 @@ const CTASection = () => {
           </Card>
         </div>
 
-        <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '450ms' }}>
+        <div className="text-center mt-12 animate-fade-in" style={{
+        animationDelay: '450ms'
+      }}>
           <p className="text-white/80 text-sm">
             Resposta em até 2 horas úteis • Atendimento no Nordeste • Certificações ISO 14001
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTASection;
