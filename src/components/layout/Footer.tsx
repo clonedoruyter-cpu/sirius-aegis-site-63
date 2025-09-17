@@ -1,20 +1,14 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logoSiriusBranca from '@/assets/logo-sirius-branca.png';
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img 
-                src={logoSiriusBranca} 
-                alt="Sirius Ambiental" 
-                className="h-[75px] w-auto"
-              />
+              <img src={logoSiriusBranca} alt="Sirius Ambiental" className="h-[75px] w-auto" />
             </div>
             <p className="text-sm opacity-90 leading-relaxed">
               Especialistas em soluções ambientais para indústrias, portos e operações marítimas. 
@@ -113,11 +107,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm opacity-90">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+55 (11) 99999-9999</span>
+                <span>+55 (81) 99822-1113</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>contato@siriusambiental.com.br</span>
+                <span>contato@siriusport.com.br</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
@@ -142,8 +136,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
