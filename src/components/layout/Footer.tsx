@@ -125,7 +125,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-90">
-          <p>© 2024 Sirius Ambiental. Todos os direitos reservados.</p>
+          <p>© 2025 Sirius Ambiental. Todos os direitos reservados.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="/politica-privacidade" className="hover:opacity-100 transition-opacity">
               Política de Privacidade
