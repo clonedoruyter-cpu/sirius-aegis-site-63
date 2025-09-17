@@ -3,33 +3,25 @@ import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import { Shield, Users, Award, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
 const About = () => {
-  const values = [
-    {
-      icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Segurança",
-      description: "Priorizamos a segurança em todas as operações, com protocolos rigorosos e equipamentos de última geração."
-    },
-    {
-      icon: <Users className="h-8 w-8 text-secondary" />,
-      title: "Expertise",
-      description: "Equipe multidisciplinar com profissionais especializados e certificados em suas áreas de atuação."
-    },
-    {
-      icon: <Award className="h-8 w-8 text-primary" />,
-      title: "Qualidade",
-      description: "Comprometimento com a excelência técnica e conformidade com as normas ambientais vigentes."
-    },
-    {
-      icon: <Clock className="h-8 w-8 text-secondary" />,
-      title: "Agilidade",
-      description: "Resposta rápida em situações de emergência com mobilização 24/7 em todo território nacional."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const values = [{
+    icon: <Shield className="h-8 w-8 text-primary" />,
+    title: "Segurança",
+    description: "Priorizamos a segurança em todas as operações, com protocolos rigorosos e equipamentos de última geração."
+  }, {
+    icon: <Users className="h-8 w-8 text-secondary" />,
+    title: "Expertise",
+    description: "Equipe multidisciplinar com profissionais especializados e certificados em suas áreas de atuação."
+  }, {
+    icon: <Award className="h-8 w-8 text-primary" />,
+    title: "Qualidade",
+    description: "Comprometimento com a excelência técnica e conformidade com as normas ambientais vigentes."
+  }, {
+    icon: <Clock className="h-8 w-8 text-secondary" />,
+    title: "Agilidade",
+    description: "Resposta rápida em situações de emergência com mobilização 24/7 em todo território nacional."
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -105,12 +97,9 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <Card 
-                  key={value.title}
-                  className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up border-0 text-center"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              {values.map((value, index) => <Card key={value.title} className="shadow-soft hover:shadow-medium transition-all duration-300 animate-slide-up border-0 text-center" style={{
+              animationDelay: `${index * 100}ms`
+            }}>
                   <CardHeader className="pb-4">
                     <div className="mx-auto mb-4 p-3 bg-accent rounded-full w-fit">
                       {value.icon}
@@ -124,8 +113,7 @@ const About = () => {
                       {value.description}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -136,10 +124,7 @@ const About = () => {
             <h2 className="text-4xl font-bold text-primary mb-6 animate-fade-in">
               Nossa Equipe
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-slide-up">
-              Profissionais altamente qualificados e experientes, comprometidos com a excelência 
-              e a segurança em todas as operações ambientais.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-slide-up">Profissionais altamente qualificados e experientes, comprometidos com a excelência e a segurança em todas as operações ambientais e mares.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center animate-scale-in">
@@ -150,7 +135,9 @@ const About = () => {
                 <p className="text-muted-foreground">Especialistas em avaliação e mitigação de impactos</p>
               </div>
 
-              <div className="text-center animate-scale-in" style={{ animationDelay: '150ms' }}>
+              <div className="text-center animate-scale-in" style={{
+              animationDelay: '150ms'
+            }}>
                 <div className="w-24 h-24 bg-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
@@ -158,7 +145,9 @@ const About = () => {
                 <p className="text-muted-foreground">Operadores treinados em resposta a emergências</p>
               </div>
 
-              <div className="text-center animate-scale-in" style={{ animationDelay: '300ms' }}>
+              <div className="text-center animate-scale-in" style={{
+              animationDelay: '300ms'
+            }}>
                 <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Award className="h-12 w-12 text-white" />
                 </div>
@@ -171,8 +160,6 @@ const About = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
