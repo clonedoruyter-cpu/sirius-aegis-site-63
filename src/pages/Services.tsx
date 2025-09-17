@@ -69,9 +69,7 @@ const Services = () => {
       <section className="pt-32 pb-20 gradient-hero">
         <div className="container mx-auto px-4">
           <div className="text-center text-white animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Nossos Serviços
-            </h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Nossos Serviços deeeee</h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
               Soluções completas em prevenção, resposta e consultoria ambiental 
               para indústrias, portos e operações marítimas
