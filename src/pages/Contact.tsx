@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import FAQ from '@/components/sections/FAQ';
 import { useToast } from '@/hooks/use-toast';
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -234,6 +235,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>;
