@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import logoSiriusBranca from '@/assets/logo-sirius-branca.png';
 const Footer = () => {
   return <footer className="bg-primary text-primary-foreground">
@@ -32,34 +33,34 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Serviços</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="/servicos/barreiras-contencao" className="hover:opacity-100 transition-opacity">
+                <Link to="/servicos" className="hover:opacity-100 transition-opacity">
                   Barreiras de Contenção
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/servicos/pei-pae" className="hover:opacity-100 transition-opacity">
+                <Link to="/servicos" className="hover:opacity-100 transition-opacity">
                   PEI e PAE
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/servicos/emergencias-maritimas" className="hover:opacity-100 transition-opacity">
+                <Link to="/servicos" className="hover:opacity-100 transition-opacity">
                   Emergências Marítimas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/servicos/monitoramento" className="hover:opacity-100 transition-opacity">
+                <Link to="/servicos" className="hover:opacity-100 transition-opacity">
                   Monitoramento Ambiental
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/servicos/consultoria" className="hover:opacity-100 transition-opacity">
+                <Link to="/servicos" className="hover:opacity-100 transition-opacity">
                   Consultoria Ambiental
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/servicos/salvatagem" className="hover:opacity-100 transition-opacity">
+                <Link to="/servicos" className="hover:opacity-100 transition-opacity">
                   Salvatagem e Resgate
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -69,34 +70,34 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Links Rápidos</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="/sobre" className="hover:opacity-100 transition-opacity">
+                <Link to="/sobre" className="hover:opacity-100 transition-opacity">
                   Sobre Nós
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cases" className="hover:opacity-100 transition-opacity">
+                <Link to="/cases" className="hover:opacity-100 transition-opacity">
                   Cases de Sucesso
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/galeria" className="hover:opacity-100 transition-opacity">
+                <Link to="/galeria" className="hover:opacity-100 transition-opacity">
                   Galeria
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/trabalhe-conosco" className="hover:opacity-100 transition-opacity">
+                <Link to="/contato" className="hover:opacity-100 transition-opacity">
                   Trabalhe Conosco
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="hover:opacity-100 transition-opacity">
+                <Link to="/contato" className="hover:opacity-100 transition-opacity">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/area-restrita" className="hover:opacity-100 transition-opacity">
+                <Link to="/contato" className="hover:opacity-100 transition-opacity">
                   Área Restrita
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -116,8 +117,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
                 <span>
-                  Av. Paulista, 1000 - Sala 1001<br />
-                  São Paulo, SP - 01310-100
+                  PE-024, Rota dos Coqueiros, 4165<br />
+                  Torre 6 Apt. 702 - Paiva<br />
+                  Cabo de Santo Agostinho - PE
                 </span>
               </div>
             </div>
@@ -127,12 +129,12 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-90">
           <p>© 2025 Sirius Ambiental. Todos os direitos reservados.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="/politica-privacidade" className="hover:opacity-100 transition-opacity">
+            <Link to="/contato" className="hover:opacity-100 transition-opacity">
               Política de Privacidade
-            </a>
-            <a href="/termos-uso" className="hover:opacity-100 transition-opacity">
+            </Link>
+            <Link to="/contato" className="hover:opacity-100 transition-opacity">
               Termos de Uso
-            </a>
+            </Link>
           </div>
         </div>
       </div>
