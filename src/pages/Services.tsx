@@ -113,7 +113,10 @@ const Services = () => {
                       </ul>
                       
                       <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-                        
+                        <a href={service.href} className="flex items-center justify-center">
+                          Saiba Mais
+                          <ArrowRight className="h-4 w-4 ml-2" />
+                        </a>
                       </Button>
                     </CardContent>
                   </div>
