@@ -10,6 +10,7 @@ import servicePeiPae from '@/assets/service-pei-pae.jpg';
 import serviceMonitoring from '@/assets/service-monitoring.jpg';
 import serviceEnvironmentalConsulting from '@/assets/service-environmental-consulting.jpg';
 import serviceSalvageRescue from '@/assets/service-salvage-rescue.jpg';
+import { useLanguage } from '@/contexts/LanguageContext';
 interface Service {
   icon: React.ReactNode;
   title: string;
@@ -62,6 +63,7 @@ const services: Service[] = [{
   href: "/servicos/salvatagem"
 }];
 const Services = () => {
+  const { t } = useLanguage();
   return <div className="min-h-screen bg-background">
       <Header />
       
@@ -114,7 +116,7 @@ const Services = () => {
                       
                       <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                         <a href={service.href} className="flex items-center justify-center">
-                          Saiba Mais
+                          {t('services.learnMore')}
                           <ArrowRight className="h-4 w-4 ml-2" />
                         </a>
                       </Button>

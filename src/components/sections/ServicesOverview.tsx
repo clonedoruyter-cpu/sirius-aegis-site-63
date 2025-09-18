@@ -82,7 +82,7 @@ const ServicesOverview = () => {
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
                   <a href="/contato">
-                    Saiba Mais
+                    {t('services.learnMore')}
                   </a>
                 </Button>
               </CardContent>
@@ -97,7 +97,7 @@ const ServicesOverview = () => {
             asChild
           >
             <a href="/servicos">
-              Ver Todos os Serviços
+              {t('services.viewAll')}
             </a>
           </Button>
         </div>

@@ -10,7 +10,9 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FAQ from '@/components/sections/FAQ';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,8 +43,8 @@ const Contact = () => {
 
       if (result.success) {
         toast({
-          title: "Mensagem enviada com sucesso!",
-          description: "Entraremos em contato em até 2 horas úteis."
+          title: t('contact.success'),
+          description: t('contact.successDesc')
         });
         setFormData({
           name: '',
@@ -60,8 +62,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Tente novamente ou entre em contato por telefone.",
+        title: t('contact.error'),
+        description: t('contact.errorDesc'),
         variant: "destructive"
       });
     } finally {
@@ -82,11 +84,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="text-center text-white animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Entre em Contato
+              {t('contact.title')}
             </h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Estamos prontos para atender suas necessidades em soluções ambientais. 
-              Fale conosco e descubra como podemos ajudar seu projeto.
+              {t('contact.subtitle')}
             </p>
           </div>
         </div>
@@ -101,57 +102,57 @@ const Contact = () => {
               <Card className="shadow-soft border-0">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-foreground">
-                    Solicitar Orçamento
+                    {t('contact.formTitle')}
                   </CardTitle>
                   <CardDescription>
-                    Preencha o formulário abaixo e receba uma proposta personalizada
+                    {t('contact.formSubtitle')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name">Nome Completo *</Label>
+                        <Label htmlFor="name">{t('contact.name')} *</Label>
                         <Input id="name" value={formData.name} onChange={e => handleChange('name', e.target.value)} required className="mt-1" />
                       </div>
                       <div>
-                        <Label htmlFor="email">E-mail *</Label>
+                        <Label htmlFor="email">{t('contact.email')} *</Label>
                         <Input id="email" type="email" value={formData.email} onChange={e => handleChange('email', e.target.value)} required className="mt-1" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone">Telefone *</Label>
+                        <Label htmlFor="phone">{t('contact.phone')} *</Label>
                         <Input id="phone" value={formData.phone} onChange={e => handleChange('phone', e.target.value)} required className="mt-1" placeholder="(11) 99999-9999" />
                       </div>
                       <div>
-                        <Label htmlFor="company">Empresa</Label>
+                        <Label htmlFor="company">{t('contact.company')}</Label>
                         <Input id="company" value={formData.company} onChange={e => handleChange('company', e.target.value)} className="mt-1" />
                       </div>
                     </div>
 
                     <div>
-                      <Label htmlFor="service">Serviço de Interesse</Label>
+                      <Label htmlFor="service">{t('contact.service')}</Label>
                       <Select value={formData.service} onValueChange={value => handleChange('service', value)}>
                         <SelectTrigger className="mt-1">
-                          <SelectValue placeholder="Selecione um serviço" />
+                          <SelectValue placeholder={t('contact.servicePlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="barreiras">Barreiras de Contenção</SelectItem>
-                          <SelectItem value="emergencias">Emergências Marítimas</SelectItem>
-                          <SelectItem value="pei-pae">PEI e PAE</SelectItem>
-                          <SelectItem value="monitoramento">Monitoramento Ambiental</SelectItem>
-                          <SelectItem value="consultoria">Consultoria Ambiental</SelectItem>
-                          <SelectItem value="salvatagem">Salvatagem e Resgate</SelectItem>
-                          <SelectItem value="outros">Outros</SelectItem>
+                          <SelectItem value="barreiras">{t('contact.services.containment')}</SelectItem>
+                          <SelectItem value="emergencias">{t('contact.services.maritime')}</SelectItem>
+                          <SelectItem value="pei-pae">{t('contact.services.pei')}</SelectItem>
+                          <SelectItem value="monitoramento">{t('contact.services.monitoring')}</SelectItem>
+                          <SelectItem value="consultoria">{t('contact.services.consulting')}</SelectItem>
+                          <SelectItem value="salvatagem">{t('contact.services.salvage')}</SelectItem>
+                          <SelectItem value="outros">{t('contact.services.others')}</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Mensagem *</Label>
-                      <Textarea id="message" value={formData.message} onChange={e => handleChange('message', e.target.value)} required className="mt-1 min-h-32" placeholder="Descreva seu projeto ou necessidade..." />
+                      <Label htmlFor="message">{t('contact.message')} *</Label>
+                      <Textarea id="message" value={formData.message} onChange={e => handleChange('message', e.target.value)} required className="mt-1 min-h-32" placeholder={t('contact.messagePlaceholder')} />
                     </div>
 
                     {/* Campo honeypot - oculto dos usuários */}
@@ -166,9 +167,9 @@ const Contact = () => {
                     />
 
                     <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary-hover" disabled={isSubmitting}>
-                      {isSubmitting ? "Enviando..." : <>
+                      {isSubmitting ? t('contact.sending') : <>
                           <Send className="mr-2 h-4 w-4" />
-                          Enviar Mensagem
+                          {t('contact.send')}
                         </>}
                     </Button>
                   </form>
@@ -187,8 +188,8 @@ const Contact = () => {
                       <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-red-800">Emergência 24h</h3>
-                      <p className="text-red-600 text-sm">Atendimento imediato</p>
+                      <h3 className="font-semibold text-red-800">{t('contact.emergency')}</h3>
+                      <p className="text-red-600 text-sm">{t('contact.emergencyDesc')}</p>
                     </div>
                   </div>
                     <Button variant="outline" className="w-full border-red-300 text-red-700 hover:bg-red-100" asChild>
@@ -211,7 +212,7 @@ const Contact = () => {
                   <div className="flex items-center">
                     <Phone className="h-5 w-5 text-primary mr-3" />
                     <div>
-                      <p className="font-medium">Telefone Comercial</p>
+                      <p className="font-medium">{t('contact.commercialPhone')}</p>
                       <a href="tel:+558199822-1113" className="text-primary hover:underline">
                         (81) 99822-1113
                       </a>
@@ -221,7 +222,7 @@ const Contact = () => {
                   <div className="flex items-center">
                     <MapPin className="h-5 w-5 text-primary mr-3" />
                     <div>
-                      <p className="font-medium">Endereço</p>
+                      <p className="font-medium">{t('contact.address')}</p>
                        <p className="text-muted-foreground text-sm">
                          PE-024, Rota dos Coqueiros, 4165<br />
                          Torre 6 Apt. 702 - Paiva<br />
@@ -233,10 +234,14 @@ const Contact = () => {
                   <div className="flex items-center">
                     <Clock className="h-5 w-5 text-primary mr-3" />
                     <div>
-                      <p className="font-medium">Horário Comercial</p>
+                      <p className="font-medium">{t('contact.businessHours')}</p>
                       <p className="text-muted-foreground text-sm">
-                        Segunda à Sexta: 8h às 18h<br />
-                        Emergências: 24h/7 dias
+                        {t('contact.businessHoursText').split('\n').map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            {index === 0 && <br />}
+                          </span>
+                        ))}
                       </p>
                     </div>
                   </div>
@@ -246,23 +251,23 @@ const Contact = () => {
               {/* Features */}
               <Card className="shadow-soft border-0 bg-secondary/5">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-secondary">Por que nos escolher?</h3>
+                  <h3 className="font-semibold mb-4 text-secondary">{t('contact.whyChoose')}</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                      Resposta em até 2 horas úteis
+                      {t('contact.response2h')}
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                      Atendimento no Nordeste
+                      {t('contact.northeastCoverage')}
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                      Certificações ISO 14001
+                      {t('contact.isoCertifications')}
                     </li>
                     <li className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-                      Equipe altamente qualificada
+                      {t('contact.qualifiedTeam')}
                     </li>
                   </ul>
                 </CardContent>
