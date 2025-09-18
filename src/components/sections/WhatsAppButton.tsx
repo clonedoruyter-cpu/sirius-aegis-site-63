@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -32,7 +32,7 @@ const WhatsAppButton = () => {
       aria-label={t('whatsapp.label')}
     >
       <div className="flex items-center space-x-2">
-        <MessageCircle className="h-6 w-6" />
+        <MessageSquare className="h-7 w-7 sm:h-6 sm:w-6" />
         <span className="hidden sm:inline font-medium">{t('whatsapp.text')}</span>
       </div>
     </Button>
