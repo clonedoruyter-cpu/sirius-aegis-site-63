@@ -3,24 +3,34 @@ import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
 import { Shield, Users, Award, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const About = () => {
-  const values = [{
-    icon: <Shield className="h-8 w-8 text-primary" />,
-    title: "Segurança",
-    description: "Priorizamos a segurança em todas as operações, com protocolos rigorosos e equipamentos de última geração."
-  }, {
-    icon: <Users className="h-8 w-8 text-secondary" />,
-    title: "Expertise",
-    description: "Equipe multidisciplinar com profissionais especializados e certificados em suas áreas de atuação."
-  }, {
-    icon: <Award className="h-8 w-8 text-primary" />,
-    title: "Qualidade",
-    description: "Comprometimento com a excelência técnica e conformidade com as normas ambientais vigentes."
-  }, {
-    icon: <Clock className="h-8 w-8 text-secondary" />,
-    title: "Agilidade",
-    description: "Resposta rápida em situações de emergência com mobilização 24/7 na região Nordeste."
-  }];
+  const { t } = useLanguage();
+  
+  const values = [
+    {
+      icon: <Shield className="h-8 w-8 text-primary" />,
+      title: t('about.values.safety'),
+      description: t('about.values.safety.desc')
+    },
+    {
+      icon: <Users className="h-8 w-8 text-secondary" />,
+      title: t('about.values.expertise'),
+      description: t('about.values.expertise.desc')
+    },
+    {
+      icon: <Award className="h-8 w-8 text-primary" />,
+      title: t('about.values.quality'),
+      description: t('about.values.quality.desc')
+    },
+    {
+      icon: <Clock className="h-8 w-8 text-secondary" />,
+      title: t('about.values.agility'),
+      description: t('about.values.agility.desc')
+    }
+  ];
+
   return <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
@@ -28,11 +38,10 @@ const About = () => {
         <section className="py-20 gradient-hero text-white">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-              Sobre a Sirius Ambiental
+              {t('about.title')}
             </h1>
             <p className="text-xl max-w-3xl mx-auto animate-slide-up">
-              Mais de 15 anos de excelência em soluções ambientais, prevenção e resposta a emergências 
-              para indústrias e operações marítimas na região Nordeste.
+              {t('about.subtitle')}
             </p>
           </div>
         </section>
@@ -42,42 +51,40 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h2 className="text-3xl font-bold text-primary mb-6">Nossa Missão</h2>
+                <h2 className="text-3xl font-bold text-primary mb-6">{t('about.mission.title')}</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Fornecer soluções ambientais completas e inovadoras que protegem o meio ambiente, 
-                  garantem a conformidade regulatória e asseguram a continuidade operacional de nossos clientes.
+                  {t('about.mission.text')}
                 </p>
                 
-                <h2 className="text-3xl font-bold text-primary mb-6">Nossa Visão</h2>
+                <h2 className="text-3xl font-bold text-primary mb-6">{t('about.vision.title')}</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Ser a empresa de referência em soluções ambientais no Brasil, reconhecida pela 
-                  excelência técnica, inovação e compromisso com a sustentabilidade.
+                  {t('about.vision.text')}
                 </p>
               </div>
 
               <div className="animate-slide-up">
                 <div className="bg-gradient-accent p-8 rounded-lg shadow-soft">
-                  <h3 className="text-2xl font-semibold text-primary mb-6">Nossos Diferenciais</h3>
+                  <h3 className="text-2xl font-semibold text-primary mb-6">{t('about.differentials.title')}</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">Atendimento 24/7 para emergências ambientais</span>
+                      <span className="text-muted-foreground">{t('about.differentials.1')}</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">Cobertura regional com bases estratégicas</span>
+                      <span className="text-muted-foreground">{t('about.differentials.2')}</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">Equipamentos modernos e certificados</span>
+                      <span className="text-muted-foreground">{t('about.differentials.3')}</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">Equipe multidisciplinar experiente</span>
+                      <span className="text-muted-foreground">{t('about.differentials.4')}</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">Certificações ISO 14001 e outras normas</span>
+                      <span className="text-muted-foreground">{t('about.differentials.5')}</span>
                     </li>
                   </ul>
                 </div>
@@ -90,9 +97,9 @@ const About = () => {
         <section className="py-20 bg-gradient-accent">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-4xl font-bold text-primary mb-4">Nossos Valores</h2>
+              <h2 className="text-4xl font-bold text-primary mb-4">{t('about.values.title')}</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Os princípios que norteiam todas as nossas ações e decisões
+                {t('about.values.subtitle')}
               </p>
             </div>
 
@@ -122,17 +129,17 @@ const About = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-primary mb-6 animate-fade-in">
-              Nossa Equipe
+              {t('about.team.title')}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-slide-up">Profissionais altamente qualificados e experientes, comprometidos com a excelência e a segurança em todas as operações ambientais e mares.</p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-slide-up">{t('about.team.subtitle')}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center animate-scale-in">
                 <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Engenheiros Ambientais</h3>
-                <p className="text-muted-foreground">Especialistas em avaliação e mitigação de impactos</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{t('about.team.environmental')}</h3>
+                <p className="text-muted-foreground">{t('about.team.environmental.desc')}</p>
               </div>
 
               <div className="text-center animate-scale-in" style={{
@@ -141,8 +148,8 @@ const About = () => {
                 <div className="w-24 h-24 bg-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Técnicos Especializados</h3>
-                <p className="text-muted-foreground">Operadores treinados em resposta a emergências</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{t('about.team.technical')}</h3>
+                <p className="text-muted-foreground">{t('about.team.technical.desc')}</p>
               </div>
 
               <div className="text-center animate-scale-in" style={{
@@ -151,8 +158,8 @@ const About = () => {
                 <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Award className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Consultores Seniores</h3>
-                <p className="text-muted-foreground">Expertise em regulamentações e compliance</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{t('about.team.consultants')}</h3>
+                <p className="text-muted-foreground">{t('about.team.consultants.desc')}</p>
               </div>
             </div>
           </div>

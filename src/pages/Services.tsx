@@ -19,51 +19,90 @@ interface Service {
   image: string;
   href: string;
 }
-const services: Service[] = [{
-  icon: <Shield className="h-12 w-12 text-primary" />,
-  title: "Barreiras de Contenção",
-  description: "Sistemas avançados de contenção preventiva para vazamentos de óleo e produtos químicos",
-  features: ["Barreiras flutuantes para ambientes marítimos", "Sistemas terrestres para indústrias", "Resposta rápida 24/7", "Equipamentos certificados internacionalmente"],
-  image: serviceContainmentBarriers,
-  href: "/servicos/barreiras-contencao"
-}, {
-  icon: <Waves className="h-12 w-12 text-secondary" />,
-  title: "Emergências Marítimas",
-  description: "Resposta especializada a incidentes ambientais no ambiente marítimo",
-  features: ["Atendimento 24 horas por dia", "Equipes especializadas", "Equipamentos de última geração", "Cobertura no Nordeste"],
-  image: serviceMaritimeEmergency,
-  href: "/servicos/emergencias-maritimas"
-}, {
-  icon: <FileText className="h-12 w-12 text-primary" />,
-  title: "PEI e PAE",
-  description: "Desenvolvimento de Planos de Emergência conforme regulamentações vigentes",
-  features: ["Planos de Emergência Individual (PEI)", "Planos de Auxílio de Emergência (PAE)", "Conformidade regulatória total", "Treinamentos inclusos"],
-  image: servicePeiPae,
-  href: "/servicos/pei-pae"
-}, {
-  icon: <Activity className="h-12 w-12 text-secondary" />,
-  title: "Monitoramento Ambiental",
-  description: "Monitoramento contínuo com tecnologia avançada e relatórios detalhados",
-  features: ["Qualidade da água e ar", "Monitoramento de solo", "Relatórios técnicos detalhados", "Análises laboratoriais certificadas"],
-  image: serviceMonitoring,
-  href: "/servicos/monitoramento"
-}, {
-  icon: <Users className="h-12 w-12 text-primary" />,
-  title: "Consultoria Ambiental",
-  description: "Consultoria especializada em licenciamento e conformidade regulatória",
-  features: ["Licenciamento ambiental", "Avaliações de impacto", "Estudos ambientais", "Conformidade regulatória"],
-  image: serviceEnvironmentalConsulting,
-  href: "/servicos/consultoria"
-}, {
-  icon: <Anchor className="h-12 w-12 text-secondary" />,
-  title: "Salvatagem e Resgate",
-  description: "Operações de salvamento marítimo e recuperação de embarcações",
-  features: ["Resgate de tripulações", "Salvamento de embarcações", "Operações de reboque", "Equipe altamente treinada"],
-  image: serviceSalvageRescue,
-  href: "/servicos/salvatagem"
-}];
 const Services = () => {
   const { t } = useLanguage();
+  
+  const services: Service[] = [
+    {
+      icon: <Shield className="h-12 w-12 text-primary" />,
+      title: t('services.containment.full.title'),
+      description: t('services.containment.full.desc'),
+      features: [
+        t('services.containment.feature1'),
+        t('services.containment.feature2'),
+        t('services.containment.feature3'),
+        t('services.containment.feature4')
+      ],
+      image: serviceContainmentBarriers,
+      href: "/servicos/barreiras-contencao"
+    },
+    {
+      icon: <Waves className="h-12 w-12 text-secondary" />,
+      title: t('services.maritime.full.title'),
+      description: t('services.maritime.full.desc'),
+      features: [
+        t('services.maritime.feature1'),
+        t('services.maritime.feature2'),
+        t('services.maritime.feature3'),
+        t('services.maritime.feature4')
+      ],
+      image: serviceMaritimeEmergency,
+      href: "/servicos/emergencias-maritimas"
+    },
+    {
+      icon: <FileText className="h-12 w-12 text-primary" />,
+      title: t('services.pei.full.title'),
+      description: t('services.pei.full.desc'),
+      features: [
+        t('services.pei.feature1'),
+        t('services.pei.feature2'),
+        t('services.pei.feature3'),
+        t('services.pei.feature4')
+      ],
+      image: servicePeiPae,
+      href: "/servicos/pei-pae"
+    },
+    {
+      icon: <Activity className="h-12 w-12 text-secondary" />,
+      title: t('services.monitoring.full.title'),
+      description: t('services.monitoring.full.desc'),
+      features: [
+        t('services.monitoring.feature1'),
+        t('services.monitoring.feature2'),
+        t('services.monitoring.feature3'),
+        t('services.monitoring.feature4')
+      ],
+      image: serviceMonitoring,
+      href: "/servicos/monitoramento"
+    },
+    {
+      icon: <Users className="h-12 w-12 text-primary" />,
+      title: t('services.consulting.full.title'),
+      description: t('services.consulting.full.desc'),
+      features: [
+        t('services.consulting.feature1'),
+        t('services.consulting.feature2'),
+        t('services.consulting.feature3'),
+        t('services.consulting.feature4')
+      ],
+      image: serviceEnvironmentalConsulting,
+      href: "/servicos/consultoria"
+    },
+    {
+      icon: <Anchor className="h-12 w-12 text-secondary" />,
+      title: t('services.salvage.full.title'),
+      description: t('services.salvage.full.desc'),
+      features: [
+        t('services.salvage.feature1'),
+        t('services.salvage.feature2'),
+        t('services.salvage.feature3'),
+        t('services.salvage.feature4')
+      ],
+      image: serviceSalvageRescue,
+      href: "/servicos/salvatagem"
+    }
+  ];
+
   return <div className="min-h-screen bg-background">
       <Header />
       
@@ -71,10 +110,9 @@ const Services = () => {
       <section className="pt-32 pb-20 gradient-hero">
         <div className="container mx-auto px-4">
           <div className="text-center text-white animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Nossos Serviços</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('services.page.title')}</h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Soluções completas em prevenção, resposta e consultoria ambiental 
-              para indústrias, portos e operações marítimas
+              {t('services.page.subtitle')}
             </p>
           </div>
         </div>
@@ -115,9 +153,9 @@ const Services = () => {
                       </ul>
                       
                       <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-                        <a href={service.href} className="flex items-center justify-center">
+                        <a href="/contato">
+                          <ArrowRight className="mr-2 h-4 w-4" />
                           {t('services.learnMore')}
-                          <ArrowRight className="h-4 w-4 ml-2" />
                         </a>
                       </Button>
                     </CardContent>
