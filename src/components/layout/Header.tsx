@@ -29,7 +29,7 @@ const Header = () => {
               <img 
                 src={logoSirius} 
                 alt="Sirius Ambiental" 
-                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto transition-transform hover:scale-105"
+                className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto transition-transform hover:scale-105"
               />
             </a>
           </div>
@@ -47,7 +47,33 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Language Switcher & CTA */}
+          {/* Mobile Actions - Language & Contact */}
+          <div className="flex md:hidden items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="flex items-center space-x-1 px-2"
+            >
+              <Globe className="h-4 w-4" />
+              <span className="text-xs font-medium">{language.toUpperCase()}</span>
+            </Button>
+            <Button className="bg-primary hover:bg-primary-hover text-primary-foreground text-xs px-2 py-1" asChild>
+              <a href="/contato">
+                {t('nav.contactUs')}
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="ml-2"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+
+          {/* Desktop Language Switcher & CTA */}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             <Button
               variant="ghost"
@@ -64,16 +90,6 @@ const Header = () => {
               </a>
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
         </div>
 
         {/* Mobile Navigation */}
@@ -90,22 +106,6 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="flex items-center justify-between pt-4 border-t">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={toggleLanguage}
-                  className="flex items-center space-x-1"
-                >
-                  <Globe className="h-4 w-4" />
-                  <span className="text-sm font-medium">{language.toUpperCase()}</span>
-                </Button>
-                <Button className="bg-primary hover:bg-primary-hover text-primary-foreground" asChild>
-                  <a href="/contato">
-                    {t('nav.contactUs')}
-                  </a>
-                </Button>
-              </div>
             </nav>
           </div>
         )}
