@@ -14,31 +14,32 @@ import teamAction7 from '@/assets/team-action-7.jpg';
 import teamAction8 from '@/assets/team-action-8.jpg';
 import teamAction9 from '@/assets/team-action-9.jpg';
 
-const teamImages = [
-  { src: teamAction1, alt: 'Equipe em operação de contenção marítima' },
-  { src: teamAction2, alt: 'Operação naval de emergência' },
-  { src: teamAction3, alt: 'Equipe de contenção em ação' },
-  { src: teamAction4, alt: 'Operação de limpeza ambiental' },
-  { src: teamAction5, alt: 'Operação de salvamento marítimo' },
-  { src: teamAction6, alt: 'Contenção de vazamento' },
-  { src: teamAction7, alt: 'Operação portuária especializada' },
-  { src: teamAction8, alt: 'Equipe técnica em campo' },
-  { src: teamAction9, alt: 'Operação de contenção avançada' }
-];
-
 const TeamInAction = () => {
   const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
+  const teamImages = [
+    { src: teamAction1, alt: t('teamAction.alt1') },
+    { src: teamAction2, alt: t('teamAction.alt2') },
+    { src: teamAction3, alt: t('teamAction.alt3') },
+    { src: teamAction4, alt: t('teamAction.alt4') },
+    { src: teamAction5, alt: t('teamAction.alt5') },
+    { src: teamAction6, alt: t('teamAction.alt6') },
+    { src: teamAction7, alt: t('teamAction.alt7') },
+    { src: teamAction8, alt: t('teamAction.alt8') },
+    { src: teamAction9, alt: t('teamAction.alt9') }
+  ];
+
 
   return (
     <section className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Nossa Equipe em Ação
+            {t('teamAction.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Veja nossos profissionais executando operações especializadas em campo
+            {t('teamAction.description')}
           </p>
         </div>
 
@@ -85,7 +86,7 @@ const TeamInAction = () => {
 
         <div className="text-center mt-8">
           <p className="text-muted-foreground">
-            Deslize para ver mais imagens da nossa equipe em operações reais. Clique nas imagens para visualizar em tamanho real.
+            {t('teamAction.slideHint')}
           </p>
         </div>
 
