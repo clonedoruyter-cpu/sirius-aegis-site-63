@@ -283,6 +283,20 @@ const translations = {
     'services.salvage.feature2': 'Salvamento de embarcações',
     'services.salvage.feature3': 'Operações de reboque',
     'services.salvage.feature4': 'Equipe altamente treinada',
+
+    // Team in Action
+    'teamAction.title': 'Nossa Equipe em Ação',
+    'teamAction.description': 'Veja nossos profissionais executando operações especializadas em campo',
+    'teamAction.slideHint': 'Deslize para ver mais imagens da nossa equipe em operações reais. Clique nas imagens para visualizar em tamanho real.',
+    'teamAction.alt1': 'Equipe em operação de contenção marítima',
+    'teamAction.alt2': 'Operação naval de emergência',
+    'teamAction.alt3': 'Equipe de contenção em ação',
+    'teamAction.alt4': 'Operação de limpeza ambiental',
+    'teamAction.alt5': 'Operação de salvamento marítimo',
+    'teamAction.alt6': 'Contenção de vazamento',
+    'teamAction.alt7': 'Operação portuária especializada',
+    'teamAction.alt8': 'Equipe técnica em campo',
+    'teamAction.alt9': 'Operação de contenção avançada',
   },
   en: {
     // Header
@@ -558,6 +572,20 @@ const translations = {
     'services.salvage.feature2': 'Vessel salvage',
     'services.salvage.feature3': 'Towing operations',
     'services.salvage.feature4': 'Highly trained team',
+
+    // Team in Action
+    'teamAction.title': 'Our Team in Action',
+    'teamAction.description': 'See our professionals executing specialized operations in the field',
+    'teamAction.slideHint': 'Slide to see more images of our team in real operations. Click on images to view full size.',
+    'teamAction.alt1': 'Team in maritime containment operation',
+    'teamAction.alt2': 'Naval emergency operation',
+    'teamAction.alt3': 'Containment team in action',
+    'teamAction.alt4': 'Environmental cleanup operation',
+    'teamAction.alt5': 'Maritime rescue operation',
+    'teamAction.alt6': 'Spill containment',
+    'teamAction.alt7': 'Specialized port operation',
+    'teamAction.alt8': 'Technical team in the field',
+    'teamAction.alt9': 'Advanced containment operation',
   }
 };
 
