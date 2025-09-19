@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { Search, Filter, ZoomIn, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -123,6 +124,29 @@ const galleryItems: GalleryItem[] = [
 ];
 
 const Gallery = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Galeria de Projetos - Sirius Ambiental",
+    "description": "Galeria fotográfica mostrando operações de emergência ambiental, contenção de vazamentos, salvatagem marítima e projetos especializados.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": 9,
+      "itemListElement": [
+        {
+          "@type": "ImageObject",
+          "name": "Operação de Contenção - Porto de Santos",
+          "contentUrl": "/src/assets/gallery-containment-1.jpg"
+        },
+        {
+          "@type": "ImageObject",
+          "name": "Equipe de Resposta Rápida",
+          "contentUrl": "/src/assets/gallery-emergency-1.jpg"
+        }
+      ]
+    }
+  };
+  
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
@@ -153,6 +177,13 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Galeria de Projetos"
+        description="Acompanhe nossos principais projetos e operações através de imagens que mostram nossa expertise em emergências ambientais."
+        keywords="galeria projetos, fotos operações, emergências ambientais, contenção vazamentos, salvatagem marítima, equipe ação"
+        type="website"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

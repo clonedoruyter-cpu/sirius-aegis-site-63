@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
@@ -5,6 +6,12 @@ import WhatsAppButton from '@/components/sections/WhatsAppButton';
 const TermsOfUse = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Termos de Uso"
+        description="Leia os termos de uso dos serviços da Sirius Ambiental e as condições para utilização de nossos serviços."
+        keywords="termos uso, condições serviço, contrato, termos legais, sirius ambiental"
+        type="website"
+      />
       <Header />
       
       <main className="container mx-auto px-4 py-16">

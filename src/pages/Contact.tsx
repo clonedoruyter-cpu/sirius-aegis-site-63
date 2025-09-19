@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,6 +14,27 @@ import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
 const Contact = () => {
   const { t } = useLanguage();
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sirius Ambiental",
+      "telephone": "+55-81-99822-1113",
+      "email": "contato@siriusport.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PE-024, Rota dos Coqueiros, 4165, Torre 6 Apt. 702",
+        "addressLocality": "Cabo de Santo Agostinho",
+        "addressRegion": "PE",
+        "postalCode": "54518-605",
+        "addressCountry": "BR"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00"
+    }
+  };
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -77,6 +99,13 @@ const Contact = () => {
     }));
   };
   return <div className="min-h-screen bg-background">
+      <SEO 
+        title={t('contact.title')}
+        description={t('contact.subtitle')}
+        keywords="contato sirius ambiental, emergência 24h, telefone emergência, email contato, endereço empresa, formulário contato"
+        type="website"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

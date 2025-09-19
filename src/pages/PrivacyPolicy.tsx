@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
@@ -5,6 +6,12 @@ import WhatsAppButton from '@/components/sections/WhatsAppButton';
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Política de Privacidade"
+        description="Conheça nossa política de privacidade e como protegemos seus dados pessoais na Sirius Ambiental."
+        keywords="política privacidade, proteção dados, LGPD, privacidade online, dados pessoais"
+        type="website"
+      />
       <Header />
       
       <main className="container mx-auto px-4 py-16">

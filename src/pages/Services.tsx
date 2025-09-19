@@ -1,6 +1,7 @@
 import { Shield, Waves, FileText, Activity, Users, Anchor, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import SEO from '@/components/SEO';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CTASection from '@/components/sections/CTASection';
@@ -21,6 +22,39 @@ interface Service {
 }
 const Services = () => {
   const { t } = useLanguage();
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Sirius Ambiental"
+    },
+    "serviceType": "Environmental Emergency Services",
+    "description": "Serviços especializados em emergências ambientais, contenção de vazamentos, consultoria e monitoramento ambiental.",
+    "offers": [
+      {
+        "@type": "Service",
+        "name": "Barreiras de Contenção",
+        "description": "Sistemas de contenção para vazamentos marítimos e terrestres"
+      },
+      {
+        "@type": "Service", 
+        "name": "Emergências Marítimas",
+        "description": "Resposta rápida a emergências em ambiente marítimo"
+      },
+      {
+        "@type": "Service",
+        "name": "PEI e PAE",
+        "description": "Desenvolvimento de Planos de Emergência Individual e de Área"
+      },
+      {
+        "@type": "Service",
+        "name": "Monitoramento Ambiental",
+        "description": "Sistemas de monitoramento contínuo da qualidade ambiental"
+      }
+    ]
+  };
   
   const services: Service[] = [
     {
@@ -104,6 +138,13 @@ const Services = () => {
   ];
 
   return <div className="min-h-screen bg-background">
+      <SEO 
+        title="Serviços de Emergência Ambiental"
+        description="Conheça nossos serviços especializados em contenção, emergências marítimas, PEI/PAE, monitoramento e consultoria ambiental."
+        keywords="serviços ambientais, contenção vazamentos, emergência marítima, PEI PAE, monitoramento ambiental, consultoria especializada"
+        type="service"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

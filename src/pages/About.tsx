@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/sections/WhatsAppButton';
@@ -7,6 +8,25 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
   const { t } = useLanguage();
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sirius Ambiental",
+      "foundingDate": "2008",
+      "description": "Empresa especializada em resposta a emergências ambientais, oferecendo soluções completas em contenção, monitoramento e consultoria ambiental.",
+      "expertise": [
+        "Contenção de Vazamentos",
+        "Emergências Marítimas",
+        "Planos de Emergência (PEI/PAE)",
+        "Monitoramento Ambiental",
+        "Consultoria Especializada",
+        "Operações de Salvatagem"
+      ]
+    }
+  };
   
   const values = [
     {
@@ -32,6 +52,13 @@ const About = () => {
   ];
 
   return <div className="min-h-screen bg-background">
+      <SEO 
+        title={t('about.title')}
+        description={t('about.subtitle')}
+        keywords="sobre sirius ambiental, história empresa, missão visão valores, equipe especializada, experiência emergências ambientais"
+        type="website"
+        structuredData={structuredData}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

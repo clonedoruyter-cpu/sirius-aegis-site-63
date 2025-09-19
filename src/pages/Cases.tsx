@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { Calendar, MapPin, Award, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -138,6 +139,29 @@ const caseStudies: CaseStudy[] = [
 ];
 
 const Cases = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Cases de Sucesso - Sirius Ambiental",
+    "description": "Casos de sucesso em emergências ambientais, operações de contenção, salvamento marítimo e consultoria especializada.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {
+          "@type": "Article",
+          "name": "Contenção de Vazamento no Porto de Santos",
+          "description": "Resposta rápida a vazamento de óleo combustível durante operação de abastecimento"
+        },
+        {
+          "@type": "Article", 
+          "name": "Emergência Ambiental em Refinaria",
+          "description": "Atendimento a emergência ambiental com vazamento de produto químico em unidade industrial"
+        }
+      ]
+    }
+  };
+  
   const getCategoryColor = (category: string) => {
     const colors: Record<string, string> = {
       "Contenção Marítima": "bg-blue-100 text-blue-800",
@@ -152,6 +176,13 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cases de Sucesso"
+        description="Conheça nossos principais projetos e como ajudamos empresas a superar desafios ambientais complexos com soluções eficazes."
+        keywords="cases sucesso, projetos ambientais, emergências resolvidas, contenção vazamentos casos, porto santos, refinaria, offshore"
+        type="website"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

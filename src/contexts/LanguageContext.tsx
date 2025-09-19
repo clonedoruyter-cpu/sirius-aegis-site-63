@@ -297,7 +297,21 @@ const translations = {
     'teamAction.alt7': 'Operação portuária especializada',
     'teamAction.alt8': 'Equipe técnica em campo',
     'teamAction.alt9': 'Operação de contenção avançada',
-  },
+      teamAction: {
+        title: "Nossa Equipe em Ação",
+        description: "Veja nossos profissionais executando operações especializadas em campo",
+        slideHint: "Deslize para ver mais imagens da nossa equipe em operações reais. Clique nas imagens para visualizar em tamanho real.",
+        alt1: "Equipe em operação de contenção marítima",
+        alt2: "Operação naval de emergência", 
+        alt3: "Equipe de contenção em ação",
+        alt4: "Operação de limpeza ambiental",
+        alt5: "Operação de salvamento marítimo",
+        alt6: "Contenção de vazamento",
+        alt7: "Operação portuária especializada",
+        alt8: "Equipe técnica em campo",
+        alt9: "Operação de contenção avançada"
+      }
+    },
   en: {
     // Header
     'nav.home': 'Home',
