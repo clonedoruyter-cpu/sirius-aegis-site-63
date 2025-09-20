@@ -10,7 +10,7 @@ const HeroStatic = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="relative h-screen flex items-center overflow-hidden -mt-20">
+    <section className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
