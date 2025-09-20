@@ -46,7 +46,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO structuredData={structuredData} />
       <Header />
-      <main className="pt-20">
+      <main>
         <HeroStatic />
         <ServicesOverview />
         <StatsSection />
