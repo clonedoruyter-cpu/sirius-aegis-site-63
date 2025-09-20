@@ -6,8 +6,8 @@ import logoSiriusBranca from '@/assets/logo-sirius-branca.png';
 
 const Footer = () => {
   const { t } = useLanguage();
-  
-  return <footer className="bg-primary text-primary-foreground">
+  return (
+    <footer className="bg-primary text-primary-foreground -mt-1">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -138,6 +138,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;
